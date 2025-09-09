@@ -118,7 +118,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="projects" className="py-8 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -127,13 +127,13 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               A showcase of my technical projects spanning machine learning, data science, and AI research, 
               demonstrating practical applications and innovative solutions.
@@ -141,7 +141,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
             {projects.map((project, index) => (
               <motion.div
                 key={index}

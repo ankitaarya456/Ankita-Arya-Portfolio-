@@ -102,7 +102,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 bg-white">
+    <section id="contact" className="py-8 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}

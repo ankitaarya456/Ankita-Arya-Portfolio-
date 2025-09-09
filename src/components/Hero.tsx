@@ -158,7 +158,7 @@ const Hero = () => {
                     {/* Experience */}
                     <div className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl">
                       <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
-                        2+
+                        1+
                       </div>
                       <div>
                         <div className="font-semibold text-gray-800">Years Experience</div>

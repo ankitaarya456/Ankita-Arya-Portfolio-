@@ -129,7 +129,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-12 bg-white">
+    <section id="skills" className="py-8 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -138,13 +138,13 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Technical Skills
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               A comprehensive overview of my technical expertise, developed through academic projects, 
               professional experience, and continuous learning.
@@ -152,7 +152,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}

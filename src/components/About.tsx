@@ -55,7 +55,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-12 bg-white">
+    <section id="about" className="py-8 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -64,20 +64,22 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 About Me
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A passionate software developer and researcher dedicated to creating innovative solutions 
-              in AI and cybersecurity while fostering the next generation of tech professionals.
+              I am a software developer and AI researcher with expertise in machine learning, cybersecurity, and 
+              full-stack development. Having worked at DRDO, LetzPay Solutions, and academia, I combine research, 
+              development, and teaching to build secure, intelligent systems while mentoring future tech professionals 
+              and contributing to impactful, real-world innovations.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Personal Story */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="card">
@@ -90,38 +92,22 @@ const About = () => {
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Hello! I'm Ankita Arya, a software developer and AI researcher currently pursuing my M.Tech at IGDTUW. 
-                    My work bridges machine learning, full-stack development, and AI security, with a focus on making 
-                    intelligent systems more robust and reliable.
+                    Hello! I'm Ankita Arya, a software developer and AI researcher pursuing my M.Tech at IGDTUW. 
+                    I specialize in machine learning, AI security, and full-stack development.
                   </p>
                   
                   <p>
-                    As a Research Intern at <strong className="text-purple-600">DRDO</strong>, I worked on adversarial 
-                    attacks in face recognition models (Facenet, ArcFace, VGG-Face) using techniques like PGD, NES, 
-                    SimBA, and Boundary Attack, while also exploring defense strategies. Earlier, at 
-                    <strong className="text-pink-600"> LetzPay Solutions</strong>, I contributed as a Software 
-                    Development Intern, improving system performance, backend functionality in Java, and database 
-                    management with MySQL/MongoDB.
+                    As a Research Intern at <strong className="text-purple-600">DRDO</strong>, I evaluated the 
+                    robustness of face recognition models against adversarial attacks like PGD, NES, SimBA, and 
+                    Boundary Attack, exploring defense strategies to improve reliability. Previously, I interned at 
+                    <strong className="text-pink-600"> LetzPay Solutions</strong>, enhancing backend systems in 
+                    Java and managing databases with MySQL/MongoDB.
                   </p>
                   
                   <p>
-                    I've also served as an <strong className="text-purple-600">Assistant Professor</strong>, teaching 
-                    Java programming, Digital Electronics, and Mathematics, which strengthened my passion for mentoring 
-                    and knowledge sharing.
-                  </p>
-                  
-                  <p>
-                    My technical toolkit includes Java, Python, Spring Boot, React.js, MySQL, Power BI, GitHub, and 
-                    Jupyter Notebook. I've applied these skills to projects such as Tweet Emotion Classification and 
-                    Google Play Store Data Analysis, combining data science and software engineering to generate 
-                    impactful insights.
-                  </p>
-                  
-                  <p>
-                    I'm driven by challenges at the intersection of <strong className="text-pink-600">AI</strong>, 
-                    <strong className="text-purple-600"> software engineering</strong>, and 
-                    <strong className="text-pink-600"> security</strong>, and I aim to contribute to research and 
-                    solutions that make technology smarter, safer, and more accessible.
+                    I've also served as an <strong className="text-purple-600">Assistant Professor</strong>, 
+                    teaching Java and core computing subjects. My skills span Java, Python, Spring Boot, React.js, 
+                    MySQL, and Power BI.
                   </p>
                 </div>
 
@@ -163,39 +149,37 @@ const About = () => {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.2 }}
-                      whileHover={{ scale: 1.02 }}
-                      className="relative bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300"
+                      className="relative"
                     >
-                      {/* Timeline Dot */}
-                      <div className="absolute -left-3 top-6 w-6 h-6 bg-white rounded-full border-4 border-purple-400 shadow-md" />
-                      
-                      <div className="flex items-start gap-4">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${edu.color} rounded-lg flex items-center justify-center text-white shadow-lg`}>
-                          {edu.icon}
-                        </div>
-                        
-                        <div className="flex-1">
-                          <div className="flex flex-wrap items-center gap-2 mb-2">
-                            <h4 className="text-lg font-bold text-gray-800">{edu.degree}</h4>
-                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                              edu.status === 'Current' 
-                                ? 'bg-green-100 text-green-700' 
-                                : 'bg-blue-100 text-blue-700'
-                            }`}>
-                              {edu.status}
-                            </span>
+                      <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-all duration-300 group">
+                        <div className="flex items-start gap-4">
+                          <div className={`w-12 h-12 bg-gradient-to-r ${edu.color} rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}>
+                            {edu.icon}
                           </div>
                           
-                          <p className="text-gray-700 font-medium mb-2">{edu.institution}</p>
-                          
-                          <div className="flex items-center gap-4 text-sm text-gray-600">
-                            <div className="flex items-center gap-1">
-                              <Calendar size={14} />
-                              <span>{edu.period}</span>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-lg font-bold text-gray-800">{edu.degree}</h4>
+                              <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                edu.status === 'Current' 
+                                  ? 'bg-green-100 text-green-700' 
+                                  : 'bg-blue-100 text-blue-700'
+                              }`}>
+                                {edu.status}
+                              </span>
                             </div>
-                            <div className="flex items-center gap-1">
-                              <Award size={14} />
-                              <span className="font-semibold text-purple-600">{edu.score}</span>
+                            
+                            <p className="text-purple-600 font-medium mb-2">{edu.institution}</p>
+                            
+                            <div className="flex items-center gap-4 text-sm text-gray-600">
+                              <div className="flex items-center gap-1">
+                                <Calendar size={14} />
+                                <span>{edu.period}</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Award size={14} />
+                                <span className="font-semibold text-gray-800">{edu.score}</span>
+                              </div>
                             </div>
                           </div>
                         </div>

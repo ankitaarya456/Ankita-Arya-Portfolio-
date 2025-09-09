@@ -87,7 +87,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="experience" className="py-8 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -96,13 +96,13 @@ const Experience = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Work Experience
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               My professional journey spans across research, education, and industry experience, 
               contributing to cutting-edge technology and nurturing future talent.
