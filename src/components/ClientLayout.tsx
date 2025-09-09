@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header } from "./Header";
+import Navigation from "./Navigation";
 import { Footer } from "./Footer";
 
 interface ClientLayoutProps {
@@ -11,12 +11,12 @@ interface ClientLayoutProps {
 export default function ClientLayout({ children }: ClientLayoutProps) {
   return (
     <>
-      <Header />
+      <Navigation />
       <motion.main
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        style={{ minHeight: "80vh", padding: "2rem 0" }}
+        className="min-h-screen"
       >
         {children}
       </motion.main>

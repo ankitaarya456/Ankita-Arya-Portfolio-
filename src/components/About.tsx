@@ -1,30 +1,225 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { GraduationCap, Award, Calendar, MapPin, TrendingUp } from "lucide-react";
 
-const About = () => (
-  <motion.section
-    className="card"
-    initial={{ opacity: 0, y: 40 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    style={{ marginTop: "2rem" }}
-  >
-    <h3 style={{ fontSize: "1.7rem", color: "var(--color-accent)", fontWeight: 700, marginBottom: "1rem" }}>
-      Education & Achievements
-    </h3>
-    <ul style={{ fontSize: "1.1rem", color: "var(--color-text)", lineHeight: 1.7 }}>
-      <li><strong>Indira Gandhi Delhi Technical University For Women</strong> (2024 - present)<br />M.Tech (87.8%)</li>
-      <li><strong>Jagan Institute of Management Studies, New Delhi (GGSIPU)</strong> (2021 - 2023)<br />MCA (89.9%)</li>
-      <li><strong>Mewar Institute of Management, Ghaziabad</strong> (2017 - 2020)<br />BCA (68.5%)</li>
-    </ul>
-    <h4 style={{ marginTop: "1.5rem", color: "var(--color-accent)", fontWeight: 600 }}>Achievements/Certifications</h4>
-    <ul style={{ fontSize: "1.05rem", color: "var(--color-text)", marginTop: "0.5rem" }}>
-      <li>Completed NPTEL Course: Digital Logic and Circuit Simulations</li>
-      <li>Python course from DUCAT</li>
-      <li>AIR 1500 in NIMCET Exam (2021)</li>
-    </ul>
-  </motion.section>
-);
+const About = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  const education = [
+    {
+      degree: "M.Tech (Master of Technology)",
+      institution: "Indira Gandhi Delhi Technical University For Women",
+      period: "2024 - Present",
+      score: "87.8%",
+      status: "Current",
+      icon: <GraduationCap size={24} />,
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      degree: "MCA (Master In Computer Application)",
+      institution: "Jagan Institute of Management Studies, New Delhi (GGSIPU)",
+      period: "2021 - 2023",
+      score: "89.9%",
+      status: "Completed",
+      icon: <Award size={24} />,
+      color: "from-pink-500 to-pink-600"
+    },
+    {
+      degree: "BCA (Bachelor In Computer Application)",
+      institution: "Mewar Institute of Management, Ghaziabad",
+      period: "2017 - 2020",
+      score: "68.5%",
+      status: "Completed",
+      icon: <TrendingUp size={24} />,
+      color: "from-purple-400 to-pink-400"
+    }
+  ];
+
+  const highlights = [
+    "AI Research Specialist with focus on adversarial attacks",
+    "Full-stack developer with Java and React expertise",
+    "Experienced educator and mentor",
+    "Published researcher in face recognition security"
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="container">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Section Header */}
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                About Me
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8" />
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              A passionate software developer and researcher dedicated to creating innovative solutions 
+              in AI and cybersecurity while fostering the next generation of tech professionals.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Personal Story */}
+            <motion.div variants={itemVariants} className="space-y-6">
+              <div className="card">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white text-sm">👋</span>
+                  </div>
+                  My Journey
+                </h3>
+                
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Hello! I'm <strong className="text-purple-600">Ankita Arya</strong>, a dedicated software developer 
+                    and AI researcher currently pursuing my M.Tech at Indira Gandhi Delhi Technical University For Women. 
+                    My journey in technology began with a curiosity about how computers work and has evolved into a 
+                    passion for creating secure, intelligent systems.
+                  </p>
+                  
+                  <p>
+                    My expertise spans across <strong className="text-pink-600">machine learning</strong>, 
+                    <strong className="text-purple-600"> full-stack development</strong>, and 
+                    <strong className="text-pink-600"> cybersecurity research</strong>. I've had the privilege 
+                    of working with prestigious organizations like <strong>DRDO</strong> and contributing to 
+                    cutting-edge research in adversarial attacks on face recognition systems.
+                  </p>
+                  
+                  <p>
+                    Beyond coding, I'm passionate about <strong className="text-purple-600">education</strong> 
+                    and have served as an Assistant Professor, where I helped shape the minds of future 
+                    developers. I believe in the power of knowledge sharing and continuous learning.
+                  </p>
+                </div>
+
+                {/* Key Highlights */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-4">What Drives Me</h4>
+                  <div className="space-y-3">
+                    {highlights.map((highlight, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+                        <span className="text-gray-700">{highlight}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Education Timeline */}
+            <motion.div variants={itemVariants}>
+              <div className="card">
+                <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <GraduationCap size={16} className="text-white" />
+                  </div>
+                  Education Journey
+                </h3>
+
+                <div className="space-y-6">
+                  {education.map((edu, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.2 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="relative bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl p-6 border border-purple-100 hover:shadow-lg transition-all duration-300"
+                    >
+                      {/* Timeline Dot */}
+                      <div className="absolute -left-3 top-6 w-6 h-6 bg-white rounded-full border-4 border-purple-400 shadow-md" />
+                      
+                      <div className="flex items-start gap-4">
+                        <div className={`w-12 h-12 bg-gradient-to-r ${edu.color} rounded-lg flex items-center justify-center text-white shadow-lg`}>
+                          {edu.icon}
+                        </div>
+                        
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-2 mb-2">
+                            <h4 className="text-lg font-bold text-gray-800">{edu.degree}</h4>
+                            <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                              edu.status === 'Current' 
+                                ? 'bg-green-100 text-green-700' 
+                                : 'bg-blue-100 text-blue-700'
+                            }`}>
+                              {edu.status}
+                            </span>
+                          </div>
+                          
+                          <p className="text-gray-700 font-medium mb-2">{edu.institution}</p>
+                          
+                          <div className="flex items-center gap-4 text-sm text-gray-600">
+                            <div className="flex items-center gap-1">
+                              <Calendar size={14} />
+                              <span>{edu.period}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Award size={14} />
+                              <span className="font-semibold text-purple-600">{edu.score}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Timeline Line */}
+                <div className="absolute left-0 top-20 bottom-20 w-px bg-gradient-to-b from-purple-300 to-pink-300 ml-3" />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Achievement Banner */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-16 text-center"
+          >
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Notable Achievement</h3>
+              <p className="text-lg opacity-90 mb-2">🏆 AIR 1500 in NIMCET Exam (2021)</p>
+              <p className="text-sm opacity-75">Demonstrating excellence in computer applications and mathematics</p>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 export default About;
