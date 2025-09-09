@@ -43,7 +43,7 @@ const Navigation = () => {
     },
     { 
       icon: <Github size={20} />, 
-      href: "https://github.com/ankitaarya", 
+      href: "https://github.com/ankitaarya456", 
       label: "GitHub",
       color: "var(--color-gray-700)"
     },

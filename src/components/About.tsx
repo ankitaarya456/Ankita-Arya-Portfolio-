@@ -55,7 +55,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -90,24 +90,38 @@ const About = () => {
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Hello! I'm <strong className="text-purple-600">Ankita Arya</strong>, a dedicated software developer 
-                    and AI researcher currently pursuing my M.Tech at Indira Gandhi Delhi Technical University For Women. 
-                    My journey in technology began with a curiosity about how computers work and has evolved into a 
-                    passion for creating secure, intelligent systems.
+                    Hello! I'm Ankita Arya, a software developer and AI researcher currently pursuing my M.Tech at IGDTUW. 
+                    My work bridges machine learning, full-stack development, and AI security, with a focus on making 
+                    intelligent systems more robust and reliable.
                   </p>
                   
                   <p>
-                    My expertise spans across <strong className="text-pink-600">machine learning</strong>, 
-                    <strong className="text-purple-600"> full-stack development</strong>, and 
-                    <strong className="text-pink-600"> cybersecurity research</strong>. I've had the privilege 
-                    of working with prestigious organizations like <strong>DRDO</strong> and contributing to 
-                    cutting-edge research in adversarial attacks on face recognition systems.
+                    As a Research Intern at <strong className="text-purple-600">DRDO</strong>, I worked on adversarial 
+                    attacks in face recognition models (Facenet, ArcFace, VGG-Face) using techniques like PGD, NES, 
+                    SimBA, and Boundary Attack, while also exploring defense strategies. Earlier, at 
+                    <strong className="text-pink-600"> LetzPay Solutions</strong>, I contributed as a Software 
+                    Development Intern, improving system performance, backend functionality in Java, and database 
+                    management with MySQL/MongoDB.
                   </p>
                   
                   <p>
-                    Beyond coding, I'm passionate about <strong className="text-purple-600">education</strong> 
-                    and have served as an Assistant Professor, where I helped shape the minds of future 
-                    developers. I believe in the power of knowledge sharing and continuous learning.
+                    I've also served as an <strong className="text-purple-600">Assistant Professor</strong>, teaching 
+                    Java programming, Digital Electronics, and Mathematics, which strengthened my passion for mentoring 
+                    and knowledge sharing.
+                  </p>
+                  
+                  <p>
+                    My technical toolkit includes Java, Python, Spring Boot, React.js, MySQL, Power BI, GitHub, and 
+                    Jupyter Notebook. I've applied these skills to projects such as Tweet Emotion Classification and 
+                    Google Play Store Data Analysis, combining data science and software engineering to generate 
+                    impactful insights.
+                  </p>
+                  
+                  <p>
+                    I'm driven by challenges at the intersection of <strong className="text-pink-600">AI</strong>, 
+                    <strong className="text-purple-600"> software engineering</strong>, and 
+                    <strong className="text-pink-600"> security</strong>, and I aim to contribute to research and 
+                    solutions that make technology smarter, safer, and more accessible.
                   </p>
                 </div>
 

@@ -66,21 +66,21 @@ const Contact = () => {
       icon: <Linkedin size={20} />,
       name: "LinkedIn",
       href: "https://linkedin.com/in/ankita-arya",
-      color: "from-blue-600 to-blue-700",
+      color: "from-blue-600 to-indigo-600",
       username: "@ankita-arya"
     },
     {
       icon: <Github size={20} />,
       name: "GitHub",
-      href: "https://github.com/ankitaarya",
-      color: "from-gray-700 to-gray-800",
-      username: "@ankitaarya"
+      href: "https://github.com/ankitaarya456",
+      color: "from-slate-700 to-slate-800",
+      username: "@ankitaarya456"
     },
     {
       icon: <MessageCircle size={20} />,
       name: "WhatsApp",
       href: "https://wa.me/918210024102",
-      color: "from-green-500 to-green-600",
+      color: "from-cyan-500 to-cyan-600",
       username: "+91 8210024102"
     }
   ];
@@ -102,7 +102,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-12 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -111,7 +111,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Let's Connect
@@ -202,7 +202,7 @@ const Contact = () => {
                   download
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center gap-3 w-full p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all group"
+                  className="flex items-center justify-center gap-3 w-full p-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all group"
                 >
                   <Download size={20} className="group-hover:animate-bounce" />
                   Download Resume

@@ -46,7 +46,7 @@ const Projects = () => {
         dataset: "10K+ tweets",
         features: "1000+"
       },
-      github: "https://github.com/ankitaarya/tweet-emotion-classification",
+      github: "https://github.com/ankitaarya456/tweet-emotion-classification",
       demo: "https://tweet-emotion-demo.herokuapp.com",
       status: "Completed",
       icon: <Brain size={24} />,
@@ -71,7 +71,7 @@ const Projects = () => {
         insights: "25+",
         categories: "33"
       },
-      github: "https://github.com/ankitaarya/google-playstore-analysis",
+      github: "https://github.com/ankitaarya456/google-playstore-analysis",
       demo: "https://playstore-analysis-dashboard.herokuapp.com",
       status: "Completed",
       icon: <BarChart3 size={24} />,
@@ -96,7 +96,7 @@ const Projects = () => {
         attacks: "4",
         accuracy: "92%"
       },
-      github: "https://github.com/ankitaarya/face-recognition-security",
+      github: "https://github.com/ankitaarya456/face-recognition-security",
       demo: "https://face-security-demo.herokuapp.com",
       status: "Research Phase",
       icon: <Star size={24} />,
@@ -118,7 +118,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="projects" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container">
         <motion.div
           variants={containerVariants}
@@ -282,7 +282,7 @@ const Projects = () => {
                 and research implementations. Visit my GitHub to explore the complete portfolio.
               </p>
               <motion.a
-                href="https://github.com/ankitaarya"
+                href="https://github.com/ankitaarya456"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}

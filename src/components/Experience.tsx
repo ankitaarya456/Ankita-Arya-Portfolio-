@@ -87,7 +87,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="experience" className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container">
         <motion.div
           variants={containerVariants}

@@ -129,7 +129,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-12 bg-white">
       <div className="container">
         <motion.div
           variants={containerVariants}

@@ -7,7 +7,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Github size={20} />, href: "https://github.com/ankitaarya", label: "GitHub" },
+    { icon: <Github size={20} />, href: "https://github.com/ankitaarya456", label: "GitHub" },
     { icon: <Linkedin size={20} />, href: "https://linkedin.com/in/ankita-arya", label: "LinkedIn" },
     { icon: <Mail size={20} />, href: "mailto:ankitaarya9135@gmail.com", label: "Email" },
     { icon: <Phone size={20} />, href: "tel:+918210024102", label: "Phone" },

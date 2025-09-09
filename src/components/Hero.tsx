@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Download, ArrowRight, Github, Linkedin, Mail, Phone, MapPin, Star } from "lucide-react";
-import Image from "next/image";
 
 const Hero = () => {
   const containerVariants = {
@@ -32,11 +31,11 @@ const Hero = () => {
     { icon: <Phone size={18} />, href: "tel:+918210024102", label: "Phone" },
     { icon: <Mail size={18} />, href: "mailto:ankitaarya9135@gmail.com", label: "Email" },
     { icon: <Linkedin size={18} />, href: "https://linkedin.com/in/ankita-arya", label: "LinkedIn" },
-    { icon: <Github size={18} />, href: "https://github.com/ankitaarya", label: "GitHub" },
+    { icon: <Github size={18} />, href: "https://github.com/ankitaarya456", label: "GitHub" },
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-16 relative">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 pb-12 relative">
       {/* Elegant Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50" />
       
@@ -57,36 +56,8 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-left">
-              {/* Profile Picture */}
-              <motion.div variants={itemVariants} className="mb-8 flex justify-center lg:justify-start">
-                <div className="relative">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 rounded-full blur-sm opacity-30"
-                  />
-                  <div className="relative w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                    <Image
-                      src="/profile-pic.jpg"
-                      alt="Ankita Arya - Software Developer & AI Researcher"
-                      width={200}
-                      height={200}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <motion.div
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center"
-                  >
-                    <Star size={16} className="text-white" />
-                  </motion.div>
-                </div>
-              </motion.div>
-
               {/* Status Badge */}
-              <motion.div variants={itemVariants} className="mb-6">
+              <motion.div variants={itemVariants} className="mb-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">
                   <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                   <span className="text-sm font-medium">Available for new opportunities</span>
@@ -95,26 +66,24 @@ const Hero = () => {
 
               {/* Main Content */}
               <motion.div variants={itemVariants}>
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-3 leading-tight">
                   Hi, I'm{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     Ankita Arya
                   </span>
                 </h1>
                 
-                <h2 className="text-xl lg:text-2xl font-semibold text-gray-700 mb-6">
+                <h2 className="text-xl lg:text-2xl font-semibold text-gray-700 mb-4">
                   Software Developer & AI Researcher
                 </h2>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="mb-8">
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Passionate M.Tech student specializing in <strong className="text-blue-600">Machine Learning</strong> and{" "}
-                  <strong className="text-indigo-600">Cybersecurity Research</strong>. Currently working at{" "}
-                  <strong className="text-gray-800">DRDO</strong> on adversarial attacks in face recognition systems.
+              <motion.div variants={itemVariants} className="mb-6">
+                <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                  Hello! I'm Ankita Arya, a software developer and AI researcher currently pursuing my M.Tech at IGDTUW. My work bridges machine learning, full-stack development, and AI security, with a focus on making intelligent systems more robust and reliable.
                 </p>
                 
-                <div className="flex items-center gap-2 text-gray-600 mb-4">
+                <div className="flex items-center gap-2 text-gray-600 mb-2">
                   <MapPin size={16} className="text-blue-500" />
                   <span>New Delhi, India</span>
                   <span className="mx-2">•</span>
@@ -124,29 +93,16 @@ const Hero = () => {
               </motion.div>
 
               {/* CTA Buttons */}
-              <motion.div variants={itemVariants} className="mb-8">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <motion.a
-                    href="#projects"
-                    whileHover={{ scale: 1.02, y: -1 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  >
-                    View My Work
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </motion.a>
-                  
-                  <motion.a
-                    href="/resume.pdf"
-                    download
-                    whileHover={{ scale: 1.02, y: -1 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300"
-                  >
-                    <Download size={18} />
-                    Download Resume
-                  </motion.a>
-                </div>
+              <motion.div variants={itemVariants} className="mb-6">
+                <motion.a
+                  href="#projects"
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  View My Work
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </motion.a>
               </motion.div>
 
               {/* Social Links */}
@@ -202,7 +158,7 @@ const Hero = () => {
                     {/* Experience */}
                     <div className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl">
                       <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
-                        3+
+                        2+
                       </div>
                       <div>
                         <div className="font-semibold text-gray-800">Years Experience</div>
