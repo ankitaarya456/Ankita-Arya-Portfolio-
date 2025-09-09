@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Download, ArrowRight, Github, Linkedin, Mail, Phone, MapPin, Star } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   const containerVariants = {
@@ -36,14 +37,14 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-16 relative">
-      {/* Simple Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-purple-50" />
+      {/* Elegant Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50" />
       
-      {/* Subtle Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+      {/* Sophisticated Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
       
       <div className="container relative z-10">
@@ -56,10 +57,38 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-left">
+              {/* Profile Picture */}
+              <motion.div variants={itemVariants} className="mb-8 flex justify-center lg:justify-start">
+                <div className="relative">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 rounded-full blur-sm opacity-30"
+                  />
+                  <div className="relative w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                    <Image
+                      src="/profile-pic.jpg"
+                      alt="Ankita Arya - Software Developer & AI Researcher"
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center"
+                  >
+                    <Star size={16} className="text-white" />
+                  </motion.div>
+                </div>
+              </motion.div>
+
               {/* Status Badge */}
               <motion.div variants={itemVariants} className="mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full border border-green-200">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                   <span className="text-sm font-medium">Available for new opportunities</span>
                 </div>
               </motion.div>
@@ -68,7 +97,7 @@ const Hero = () => {
               <motion.div variants={itemVariants}>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
                   Hi, I'm{" "}
-                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     Ankita Arya
                   </span>
                 </h1>
@@ -80,16 +109,16 @@ const Hero = () => {
 
               <motion.div variants={itemVariants} className="mb-8">
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Passionate M.Tech student specializing in <strong className="text-purple-600">Machine Learning</strong> and{" "}
-                  <strong className="text-pink-600">Cybersecurity Research</strong>. Currently working at{" "}
+                  Passionate M.Tech student specializing in <strong className="text-blue-600">Machine Learning</strong> and{" "}
+                  <strong className="text-indigo-600">Cybersecurity Research</strong>. Currently working at{" "}
                   <strong className="text-gray-800">DRDO</strong> on adversarial attacks in face recognition systems.
                 </p>
                 
                 <div className="flex items-center gap-2 text-gray-600 mb-4">
-                  <MapPin size={16} className="text-purple-500" />
+                  <MapPin size={16} className="text-blue-500" />
                   <span>New Delhi, India</span>
                   <span className="mx-2">•</span>
-                  <Star size={16} className="text-yellow-500" />
+                  <Star size={16} className="text-amber-500" />
                   <span>M.Tech Student at IGDTUW</span>
                 </div>
               </motion.div>
@@ -101,7 +130,7 @@ const Hero = () => {
                     href="#projects"
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   >
                     View My Work
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -112,7 +141,7 @@ const Hero = () => {
                     download
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-purple-300 shadow-md hover:shadow-lg transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-xl border-2 border-gray-200 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Download size={18} />
                     Download Resume
@@ -135,7 +164,7 @@ const Hero = () => {
                       transition={{ delay: 0.8 + index * 0.1 }}
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:text-purple-600 hover:border-purple-300 shadow-md hover:shadow-lg transition-all duration-300"
+                      className="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:text-blue-600 hover:border-blue-300 shadow-md hover:shadow-lg transition-all duration-300"
                       title={social.label}
                     >
                       {social.icon}
@@ -160,8 +189,8 @@ const Hero = () => {
 
                   <div className="space-y-6">
                     {/* Education */}
-                    <div className="flex items-center gap-4 p-4 bg-purple-50 rounded-xl">
-                      <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl">
+                      <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
                         87.8%
                       </div>
                       <div>
@@ -171,8 +200,8 @@ const Hero = () => {
                     </div>
 
                     {/* Experience */}
-                    <div className="flex items-center gap-4 p-4 bg-pink-50 rounded-xl">
-                      <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    <div className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl">
+                      <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
                         3+
                       </div>
                       <div>
@@ -182,8 +211,8 @@ const Hero = () => {
                     </div>
 
                     {/* MCA */}
-                    <div className="flex items-center gap-4 p-4 bg-indigo-50 rounded-xl">
-                      <div className="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
+                    <div className="flex items-center gap-4 p-4 bg-cyan-50 rounded-xl">
+                      <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center text-white font-bold">
                         89.9%
                       </div>
                       <div>
@@ -198,7 +227,7 @@ const Hero = () => {
                 <motion.div
                   animate={{ y: [-5, 5, -5] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg"
+                  className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg"
                 >
                   DRDO
                 </motion.div>
@@ -206,7 +235,7 @@ const Hero = () => {
                 <motion.div
                   animate={{ y: [5, -5, 5] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg"
+                  className="absolute -bottom-4 -left-4 w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg"
                 >
                   AI/ML
                 </motion.div>
