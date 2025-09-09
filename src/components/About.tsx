@@ -44,15 +44,6 @@ const About = () => {
       status: "Completed",
       icon: <Award size={24} />,
       color: "from-pink-500 to-pink-600"
-    },
-    {
-      degree: "BCA (Bachelor In Computer Application)",
-      institution: "Mewar Institute of Management, Ghaziabad",
-      period: "2017 - 2020",
-      score: "68.5%",
-      status: "Completed",
-      icon: <TrendingUp size={24} />,
-      color: "from-purple-400 to-pink-400"
     }
   ];
 
@@ -204,18 +195,6 @@ const About = () => {
               </div>
             </motion.div>
           </div>
-
-          {/* Achievement Banner */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-16 text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Notable Achievement</h3>
-              <p className="text-lg opacity-90 mb-2">🏆 AIR 1500 in NIMCET Exam (2021)</p>
-              <p className="text-sm opacity-75">Demonstrating excellence in computer applications and mathematics</p>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
